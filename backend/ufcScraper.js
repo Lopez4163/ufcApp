@@ -1,43 +1,51 @@
 import puppeteer from "puppeteer";
-import { createLogger } from "vite";
 
 const main = async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  await page.goto(
-    "https://www.ufc.com/athletes/all?filters%5B0%5D=status%3A23&gender=All&search=&page=1",
-    { timeout: 50000 },
-  );
+  const jsonFilePath = "fighters.json";
 
-  const fighterScrape = await page.evaluate(() => {
-    const fightersArray = [];
-    const fighters = Array.from(
-      document.querySelectorAll(".c-listing-athlete-flipcard__front"),
+  for (let pageNumber = 1; pageNumber <= 87; pageNumber++) {
+    await page.goto(
+      `https://www.ufc.com/athletes/all?filters%5B0%5D=status%3A23&gender=All&search=&page=${pageNumber}`,
+      { timeout: 50000 },
     );
-    fighters.forEach((element) => {
-      imgSrc =
-        element
-          .querySelector(".c-listing-athlete__thumbnail img")
-          ?.getAttribute("src") || "";
-      let name = element
-        .querySelector(".c-listing-athlete__name")
-        .textContent.trim();
-      let nickname = element
-        .querySelector(".c-listing-athlete__nickname")
-        .textContent.trim();
-      let weight_Class = element
-        .querySelector(".c-listing-athlete__title .field__item")
-        .textContent.trim();
-      let record = element
-        .querySelector(".c-listing-athlete__record")
-        .textContent.trim();
-      if (nickname === "") {
-        nickname += "No Nickname";
-      }
-      fightersArray.push(imgSrc, name, nickname, weight_Class, record);
+
+    const fighterScrape = await page.evaluate(() => {
+      let jsonFighterRoster;
+      const fightersArray = [];
+      const fighters = Array.from(
+        document.querySelectorAll(".c-listing-athlete-flipcard__front"),
+      );
+
+      fighters.forEach((element) => {
+        const fightersObject = {
+          name: element
+            .querySelector(".c-listing-athlete__name")
+            .textContent.trim(),
+          nickname:
+            element
+              .querySelector(".c-listing-athlete__nickname")
+              .textContent.trim() || "No Nickname",
+          weightClass: element
+            .querySelector(".c-listing-athlete__title .field__item")
+            .textContent.trim(),
+          record: element
+            .querySelector(".c-listing-athlete__record")
+            .textContent.trim(),
+        };
+
+        fightersArray.push(fightersObject);
+        jsonFighterRoster = JSON.stringify(fightersObject);
+      });
+
+      return fightersArray;
     });
-    return fightersArray;
-  });
-  console.log(fighterScrape);
+
+    console.log(`Page ${pageNumber} Fighters:`, fighterScrape);
+  }
+
+  await browser.close();
 };
+
 main();
