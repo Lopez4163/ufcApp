@@ -5,12 +5,13 @@ const path = require('path');
 const main = async () => {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  let testArray = []
-  for (let pageNumber = 1; pageNumber <= 86; pageNumber++) {
+  let ufcScrapedRosterArray = []
+  for (let pageNumber = 0; pageNumber <= 87; pageNumber++) {
     await page.goto(
         `https://www.ufc.com/athletes/all?filters%5B0%5D=status%3A23&gender=All&search=&page=${pageNumber}`,
         {timeout: 50000},
-    );
+
+  );
 
     const fighterScrape = await page.evaluate(() => {
       const fightersArray = [];
@@ -20,6 +21,10 @@ const main = async () => {
 
       fighters.forEach((element) => {
         const fightersObject = {
+          imgSrc :
+          element
+              .querySelector(".c-listing-athlete__thumbnail img")
+              ?.getAttribute("src") || "",
           name: element
               .querySelector(".c-listing-athlete__name")
               .textContent.trim(),
@@ -33,22 +38,26 @@ const main = async () => {
           record: element
               .querySelector(".c-listing-athlete__record")
               .textContent.trim(),
+
         };
         fightersArray.push(fightersObject);
+
       });
 
       return fightersArray;
     });
     console.log(`Page: ${pageNumber}`)
-    testArray.push(fighterScrape)
-    await fs.writeFile(`pageData.json`, JSON.stringify(testArray), (err) => {
+    ufcScrapedRosterArray = [...ufcScrapedRosterArray, ...fighterScrape]
+    await fs.writeFile(`pageData.json`, JSON.stringify(ufcScrapedRosterArray), (err) => {
       if (err) {
         console.log(err);
       } else {
         console.log(`Data  of  Page Scraped`);
       }
     });
+
   }
+
   await browser.close();
 };
 
