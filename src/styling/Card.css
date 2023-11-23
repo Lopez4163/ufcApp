@@ -1,0 +1,55 @@
+
+.fighterList{
+    display: flex;
+    flex-flow: wrap;
+
+}
+
+.fighter-card {
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(192, 185, 185, 0.71);
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    max-width: 250px;
+}
+.fight-card-image {
+    max-width: 60%;
+    height: auto;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+
+.card-fighter-name  {
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    color: rgba(23, 22, 22, 0.91);
+    padding-top: 5px;
+}
+.card-fighter-nickname {
+    font-family: arial, sans-serif;
+    font-size: 17px;
+    margin: 0;
+    color: rgba(35, 32, 32, 0.78);
+    padding-top: 5px;
+}
+.card-fighter-weightclass {
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    color: rgba(23, 22, 22, 0.91);
+    margin: 0;
+    padding-top: 5px;
+}
+.card-fighter-record {
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 10px;
+
+}
+
+
