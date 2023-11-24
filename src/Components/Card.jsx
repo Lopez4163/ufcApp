@@ -10,10 +10,11 @@ function Card() {
         <div key={fighter.name} className="fighter-card">
           <img
             alt={fighter.name}
-            className={`fight-card-image ${fighter.alt ? "alt-image" : ""}`}
+            className={`fight-card-image`}
             src={fighter.imgSrc}
             onError={(e) => {
               e.target.src = altImage;
+              e.target.className = "broken-image";
               e.target.onerror = null;
             }}
           />

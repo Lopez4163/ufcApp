@@ -1,8 +1,10 @@
 
 .fighterList{
     display: flex;
-    flex-flow: wrap;
-
+    flex-grow: 1; /* Allow FighterList to grow and take remaining space */
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin-right: auto;
 }
 
 .fighter-card {
@@ -13,9 +15,17 @@
     margin: 10px;
     text-align: center;
     max-width: 250px;
+
 }
 .fight-card-image {
     max-width: 60%;
+    height: auto;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+.broken-image {
+    max-width: 52%;
     height: auto;
     border-radius: 50%;
     padding-top: 10px;
