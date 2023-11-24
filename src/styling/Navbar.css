@@ -1,0 +1,33 @@
+
+
+
+.navbar {
+    border-color: red;
+    border-style: dashed;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: #36393f;
+    color: white;
+    padding: 20px;
+    margin-right: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
