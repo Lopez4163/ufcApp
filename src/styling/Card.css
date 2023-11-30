@@ -4,12 +4,14 @@
     border-color: black;
     border-style: dashed;
     overflow-x: auto;
+    margin-left: 10px; /* Adjust the margin to leave space for the navbar */
     display: flex;
-    flex-direction: column;
-
+    flex-wrap: wrap;
+    gap: 10px; /* Add some gap between items for better spacing */
     flex-grow: 0;
     width: 100vh;
-
+    overflow-y: auto; /* Enable vertical scrollbar */
+    height: 100vh; /* Set height to 100% of the viewport */
 }
 
 /*.fighter-card {*/
@@ -20,10 +22,13 @@
     border: 1px solid rgba(0, 0, 0, 0.11);
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(192, 185, 185, 0.71);
-    padding: 5px;
     margin: 10px;
     text-align: center;
-    max-width: 250px;
+
+    width: calc(27%); /* 33.33% width for a 3x3 grid with 10px gap */
+    box-sizing: border-box;
+    padding: 10px;
+
 
 }
 
@@ -72,3 +77,4 @@
     padding-top: 7px;
     padding-bottom: 10px;
 }
+

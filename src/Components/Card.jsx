@@ -1,5 +1,5 @@
 import React from "react";
-import pageData from "../pageData.json";
+import pageData from "../fighterlist.jsx";
 import "../styling/Card.css";
 let altImage = "src/assets/tonyAlt.jpg";
 
@@ -26,7 +26,6 @@ function Card() {
             <p className="card-fighter-record">
               <span>{fighter.record}</span>
             </p>
-            {/* Other properties */}
           </div>
         </div>
       ))}
