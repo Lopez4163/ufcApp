@@ -1,37 +1,21 @@
-import React, { useState } from 'react';
-import fighterlist from "../fighterlist.jsx";
+import React, { useState } from "react";
 
 const SearchBar = () => {
-    const [searchTerm, setSearch] = useState('')
-    const onChange = (e) => {
-        e.target.value
-    }
-    const onSearch = (searchTerm) => {
-        console.log(searchTerm)
-    }
+  const [searchTerm, setSearch] = useState("");
 
-    return (
-        <div>
-            <div>
-                <input type='text' onChange = {onChange} />
-                <button onClick={() => onSearch(searchTerm)}>
-                    Search
-                </button>
-            </div>
-            <div className='dropDown'>
-                {fighterlist.filter(fighters => {
-                    const value = value.toLowerCase()
-                    const fullName = fighters.name
-                })
-                    .map((fighters) =>
-                    <div>
-                        {fighters.name}
-                    </div>
-                )}
-            </div>
-
-        </div>
-    );
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search"
+        onChange={(event) => {
+          setSearch(event.target.value);
+        }}
+      />
+      <button onClick={() => setSearch("")}>Clear</button>
+      <p>Searching for: {searchTerm}</p>
+    </div>
+  );
 };
 
 export default SearchBar;

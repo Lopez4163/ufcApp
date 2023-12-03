@@ -9,9 +9,10 @@
     flex-wrap: wrap;
     gap: 10px; /* Add some gap between items for better spacing */
     flex-grow: 0;
-    width: 100vh;
+    width: 140vh;
     overflow-y: auto; /* Enable vertical scrollbar */
-    height: 100vh; /* Set height to 100% of the viewport */
+    height: 98vh; /* Set height to 100% of the viewport */
+    padding-left: 100px;
 }
 
 /*.fighter-card {*/
@@ -24,12 +25,18 @@
     box-shadow: 5px 5px 5px rgba(192, 185, 185, 0.71);
     margin: 10px;
     text-align: center;
-
     width: calc(27%); /* 33.33% width for a 3x3 grid with 10px gap */
     box-sizing: border-box;
     padding: 10px;
 
 
+}
+
+.card-fighter-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .fight-card-image {
@@ -78,3 +85,29 @@
     padding-bottom: 10px;
 }
 
+@media all and (max-width: 500px) {
+    .fighter-card {
+        height: calc(30%);
+        width: calc(40%); /* 50% width for a 2x2 grid with 10px gap */
+    }
+    .fight-card-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        padding-top: 10px;
+    }
+
+    .card-fighter-name {
+        font-size: 15px;
+    }
+    .card-fighter-nickname {
+        font-size: 12px;
+    }
+    .card-fighter-weightclass {
+        font-size: 10px;
+    }
+    .card-fighter-record {
+        font-size: 10px;
+    }
+
+}

@@ -1,12 +1,12 @@
 import React from "react";
-import pageData from "../fighterlist.jsx";
+import fighterListArray from "../fighterlistArray.json";
 import "../styling/Card.css";
 let altImage = "src/assets/tonyAlt.jpg";
 
 function Card() {
   return (
     <div className="fighterList">
-      {pageData.map((fighter) => (
+      {fighterListArray.map((fighter) => (
         <div key={fighter.name} className="fighter-card">
           <img
             alt={fighter.name}
