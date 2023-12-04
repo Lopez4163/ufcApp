@@ -10,14 +10,13 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearch = () => {
       onSearch(searchTerm.toLowerCase());
-
   }
 
   return (
     <div>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Search Fighter.."
         value={searchTerm}
         onChange={handleInputChange}
       />

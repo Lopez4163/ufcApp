@@ -4,14 +4,15 @@ import Navbar from "./Components/Navbar.jsx";
 import fighterListArray from "./fighterlistArray.json";
 import "./App.css";
 
-function App() {
+
+function App( ) {
   const [fighterArray, setFighterArray] = useState(fighterListArray);
   const [filteredFighterListArray, setFilteredFighterListArray] = useState(
       fighterListArray
   );
   const showAllFighters = () => {
     setFilteredFighterListArray(fighterArray);
-    console.log(fighterArray)
+
   };
   const showMaleFighters = () => {
     const maleFighters = fighterArray.filter(
@@ -19,7 +20,6 @@ function App() {
             !fighter.weightClass.includes("Women's")
     );
     setFilteredFighterListArray(maleFighters);
-    console.log(maleFighters);
   };
   const showFemaleFighters = () => {
     const femaleFighters = fighterArray.filter(
@@ -27,8 +27,15 @@ function App() {
             fighter.weightClass.includes("Women's")
     );
     setFilteredFighterListArray(femaleFighters);
-    console.log(femaleFighters);
   };
+  const searchFighters = (searchTerm) => {
+    const filteredFighters = fighterArray.filter((fighter) =>
+        Object.values(fighter).some((value) =>
+        value.toLowerCase().includes(searchTerm)
+        )
+    )
+    setFilteredFighterListArray(filteredFighters);
+  }
 
   return (
       <div className="app-container">
@@ -36,6 +43,7 @@ function App() {
             onShowAll={showAllFighters}
             onShowMale={showMaleFighters}
             onShowFemale={showFemaleFighters}
+            onSearch={searchFighters}
         />
         <Card fighters={filteredFighterListArray} />
       </div>
