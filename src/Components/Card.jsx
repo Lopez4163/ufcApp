@@ -1,12 +1,13 @@
 import React from "react";
-import pageData from "../fighterlist.jsx";
+import fighterListArray from "../fighterlistArray.json";
 import "../styling/Card.css";
 let altImage = "src/assets/tonyAlt.jpg";
 
-function Card() {
+// eslint-disable-next-line react/prop-types
+function Card( { fighters } ) {
   return (
     <div className="fighterList">
-      {pageData.map((fighter) => (
+      {fighters.map((fighter) => (
         <div key={fighter.name} className="fighter-card">
           <img
             alt={fighter.name}

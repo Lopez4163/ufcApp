@@ -1,37 +1,29 @@
-import React, { useState } from 'react';
-import fighterlist from "../fighterlist.jsx";
+import React, { useState } from "react";
 
-const SearchBar = () => {
-    const [searchTerm, setSearch] = useState('')
-    const onChange = (e) => {
-        e.target.value
-    }
-    const onSearch = (searchTerm) => {
-        console.log(searchTerm)
-    }
+// eslint-disable-next-line react/prop-types
+const SearchBar = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState("");
 
-    return (
-        <div>
-            <div>
-                <input type='text' onChange = {onChange} />
-                <button onClick={() => onSearch(searchTerm)}>
-                    Search
-                </button>
-            </div>
-            <div className='dropDown'>
-                {fighterlist.filter(fighters => {
-                    const value = value.toLowerCase()
-                    const fullName = fighters.name
-                })
-                    .map((fighters) =>
-                    <div>
-                        {fighters.name}
-                    </div>
-                )}
-            </div>
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
-        </div>
-    );
+  const handleSearch = () => {
+      onSearch(searchTerm.toLowerCase());
+
+  }
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleInputChange}
+      />
+      <button onClick={handleSearch}>Search</button>
+    </div>
+  );
 };
 
 export default SearchBar;
