@@ -1,33 +1,63 @@
-
-
-
+* {
+    box-sizing: border-box;
+}
 .navbar {
-    border-color: red;
-    border-style: dashed;
+    background-color: #2B2B2B;
+    box-shadow: 20px 20px 20px 20px #423F3E ;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 250px;
-    background-color: #36393f;
     color: white;
     padding: 20px;
     margin-right: 10px;
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+.nav-logo {
+    height: 90px;
+    width: 150px ;
+    margin-top: -5px;
+    box-shadow: 3px 3px 3px 3px #423F3E;
+    border-radius: 10px;
+}
+.logo-items {
+    text-align: center;
+    color: red;
+}
+
+.logo-text {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fa-brands {
+    padding-top: 10px;
+    font-size: 30px;
+    padding-right: 10px;
+    animation: fadeInOut 3s infinite; /* Adjust the duration as needed */
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
     align-items: center;
 }
 
-.navbar-logo {
-    width: 50px;
-    height: auto;
-    margin-bottom: 20px;
-}
 
-.navbar-links {
-    display: flex;
-    flex-direction: column;
-}
-
-.navbar-links a {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 10px;
-}

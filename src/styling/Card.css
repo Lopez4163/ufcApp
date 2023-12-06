@@ -1,42 +1,37 @@
-
+* {
+    box-sizing: border-box;
+}
 .fighterList {
-
-    border-color: black;
-    border-style: dashed;
+    background-color: #2B2B2B;
+    box-shadow: 20px 20px 20px 20px #423F3E ;
     overflow-x: auto;
-    margin-left: 10px; /* Adjust the margin to leave space for the navbar */
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Add some gap between items for better spacing */
-    flex-grow: 0;
-    width: 140vh;
-    overflow-y: auto; /* Enable vertical scrollbar */
-    height: 98vh; /* Set height to 100% of the viewport */
-    padding-left: 100px;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    padding: 20px 20px 20px 20px;
 }
 
-/*.fighter-card {*/
-/*    */
-/*}*/
+
 
 .fighter-card {
-    border: 1px solid rgba(0, 0, 0, 0.11);
+    background-color: #121212;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(192, 185, 185, 0.71);
+    box-shadow: 5px 5px 5px #423F3E ;
     margin: 10px;
     text-align: center;
     width: calc(27%); /* 33.33% width for a 3x3 grid with 10px gap */
     box-sizing: border-box;
     padding: 10px;
-
-
 }
 
 .card-fighter-info {
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .fight-card-image {
@@ -57,7 +52,7 @@
     font-family: arial, sans-serif;
     font-size: 20px;
     margin: 0;
-    color: rgba(23, 22, 22, 0.91);
+    color: white;
     padding-top: 5px;
 }
 
@@ -65,14 +60,14 @@
     font-family: arial, sans-serif;
     font-size: 17px;
     margin: 0;
-    color: rgba(35, 32, 32, 0.78);
+    color: white;
     padding-top: 5px;
 }
 
 .card-fighter-weightclass {
     font-family: arial, sans-serif;
     font-size: 15px;
-    color: rgba(23, 22, 22, 0.91);
+    color: white;
     margin: 0;
     padding-top: 5px;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styling/SearchBar.css";
 
 // eslint-disable-next-line react/prop-types
 const SearchBar = ({ onSearch }) => {
@@ -20,7 +21,7 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className="search-button" onClick={handleSearch}>Search</button>
     </div>
   );
 };
