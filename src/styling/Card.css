@@ -1,9 +1,13 @@
 * {
     box-sizing: border-box;
+
 }
+
+
 .fighterList {
-    background-color: #2B2B2B;
-    box-shadow: 20px 20px 20px 20px #423F3E ;
+
+    background-color: black;
+    box-shadow: 10px 10px 10px 10px red ;
     overflow-x: auto;
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +21,7 @@
 .fighter-card {
     background-color: #121212;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #423F3E ;
+    box-shadow: 5px 5px 5px red ;
     margin: 10px;
     text-align: center;
     width: calc(27%); /* 33.33% width for a 3x3 grid with 10px gap */
@@ -80,6 +84,33 @@
     padding-bottom: 10px;
 }
 
+.none-found {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 145.5vh;
+    height: 94vh;
+}
+.none-found-giphy {
+    position: relative;
+    align-content: center;
+    height: 36%;
+    width: 30%;
+    top: -140px;
+    right: -290px;
+}
+
+
+.giphy-text {
+    position: relative;
+    top: 20px ;
+    bottom: -200px;
+    left: -180px;
+    font-size: 35px;
+    color: red;
+}
+
 @media all and (max-width: 800px) {
     .fighter-card {
         height: calc(30%);
@@ -104,5 +135,6 @@
     .card-fighter-record {
         font-size: 10px;
     }
+
 
 }

@@ -2,14 +2,14 @@
     box-sizing: border-box;
 }
 .navbar {
-    background-color: #2B2B2B;
-    box-shadow: 20px 20px 20px 20px #423F3E ;
+    background-color: black;
+    box-shadow: 10px 10px 10px 10px red ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 250px;
     color: white;
-    padding: 20px;
+    padding: 50px;
     margin-right: 10px;
     align-items: center;
 }
