@@ -1,140 +1,179 @@
 * {
     box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
 }
 
 
 .fighterList {
-
     background-color: black;
-    box-shadow: 10px 10px 10px 10px red ;
+    box-shadow: 10px 10px 10px 10px red;
     overflow-x: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: flex-start;
     padding: 20px 20px 20px 20px;
+    gap: 20PX;
 }
 
-
-
-.fighter-card {
+.card {
     background-color: #121212;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px red ;
-    margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+}
+.card-front {
+        text-align: center;
+        box-sizing: border-box;
+        margin: 10px;
+}
+
+.card-back {
     text-align: center;
-    width: calc(27%); /* 33.33% width for a 3x3 grid with 10px gap */
     box-sizing: border-box;
-    padding: 10px;
+    margin: 10px;
 }
 
 .card-fighter-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        padding: 20px 20px 20px 20px;
+        width: 300px;
+        height: 150px;
+        overflow: auto;
+    }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.fight-card-image {
-    max-width: 60%;
-    height: auto;
-    border-radius: 50%;
-    padding-top: 10px;
-}
-
-.broken-image {
-    max-width: 52%;
-    height: auto;
-    border-radius: 50%;
-    padding-top: 10px;
+.fight-card-image, .broken-image {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+        border-radius: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
 }
 
 .card-fighter-name {
-    font-family: arial, sans-serif;
-    font-size: 20px;
-    margin: 0;
-    color: white;
-    padding-top: 5px;
+        font-family: arial, sans-serif;
+        font-size: 20px;
+        margin: 0;
+        color: white;
+        padding-top: 5px;
 }
 
 .card-fighter-nickname {
-    font-family: arial, sans-serif;
-    font-size: 17px;
-    margin: 0;
-    color: white;
-    padding-top: 5px;
+        font-family: arial, sans-serif;
+        font-size: 17px;
+        margin: 0;
+        color: white;
+        padding-top: 5px;
 }
 
 .card-fighter-weightclass {
-    font-family: arial, sans-serif;
-    font-size: 15px;
-    color: white;
-    margin: 0;
-    padding-top: 5px;
+        font-family: arial, sans-serif;
+        font-size: 15px;
+        color: white;
+        margin: 0;
+        padding-top: 5px;
 }
 
 .card-fighter-record {
-    font-family: arial, sans-serif;
-    font-size: 15px;
-    margin: 0;
-    padding-top: 7px;
-    padding-bottom: 10px;
+        font-family: arial, sans-serif;
+        font-size: 15px;
+        margin: 0;
+        padding-top: 7px;
+        padding-bottom: 10px;
 }
 
+
+
 .none-found {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 145.5vh;
-    height: 94vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 145.5vh;
+        height: 94vh;
 }
+
 .none-found-giphy {
-    position: relative;
-    align-content: center;
-    height: 36%;
-    width: 30%;
-    top: -140px;
-    right: -290px;
+        position: relative;
+        align-content: center;
+        height: 36%;
+        width: 30%;
+        top: -140px;
+        right: -290px;
 }
 
 
 .giphy-text {
-    position: relative;
-    top: 20px ;
-    bottom: -200px;
-    left: -180px;
-    font-size: 35px;
-    color: red;
+        position: relative;
+        top: 20px;
+        bottom: -200px;
+        left: -180px;
+        font-size: 35px;
+        color: red;
 }
 
-@media all and (max-width: 800px) {
-    .fighter-card {
-        height: calc(30%);
-        width: calc(40%); /* 50% width for a 2x2 grid with 10px gap */
-    }
-    .fight-card-image {
-        max-width: 90%;
-        height: auto;
-        border-radius: 50%;
-        padding-top: 10px;
-    }
 
-    .card-fighter-name {
-        font-size: 15px;
-    }
-    .card-fighter-nickname {
-        font-size: 12px;
-    }
-    .card-fighter-weightclass {
-        font-size: 10px;
-    }
-    .card-fighter-record {
-        font-size: 10px;
-    }
+    @media screen and (max-width: 768px) {
+        .fighterList {
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
 
+        .fighter-card {
+            width: 90%;
+        }
 
-}
+        .card-fighter-info {
+            width: 100%;
+            height: 100%;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .card-fighter-name {
+            font-size: 20px;
+        }
+
+        .card-fighter-nickname {
+            font-size: 17px;
+        }
+
+        .card-fighter-weightclass {
+            font-size: 15px;
+        }
+
+        .card-fighter-record {
+            font-size: 15px;
+        }
+
+        .fight-card-image, .broken-image {
+            width: 100%;
+            height: 100%;
+        }
+
+        .none-found {
+            width: 100%;
+            height: 100%;
+        }
+
+        .none-found-giphy {
+            width: 100%;
+            height: 100%;
+            top: -100px;
+            right: -100px;
+        }
+
+        .giphy-text {
+            font-size: 20px;
+            top: 20px;
+            bottom: -200px;
+            left: -180px;
+        }
+
+    }
