@@ -13,7 +13,7 @@ const main = async () => {
 
   );
 
-    const fighterScrape = await page.evaluate(() => {
+    const fighterScrapeufc = await page.evaluate(() => {
       const fightersArray = [];
       const fighters = Array.from(
           document.querySelectorAll(".c-listing-athlete-flipcard__front"),
