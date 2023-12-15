@@ -15,7 +15,7 @@ const main = async () => {
 
       rosterWatchTable.forEach((element) => {
         const rosterObject = {
-          name: element.querySelector(".rt-tr-group").textContent.trim(),
+          name: element.querySelector(".rt-tr").textContent.trim()
           // country: element.querySelector(".rt-td .rt-align-left .rt-valign-center").innerHTML
 
         };
