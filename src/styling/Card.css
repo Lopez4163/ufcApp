@@ -11,29 +11,33 @@
     overflow-x: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     align-content: flex-start;
     padding: 20px 20px 20px 20px;
     gap: 20PX;
 }
 
 .card {
-    background-color: #121212;
+        background-color: #121212;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         border-radius: 10px;
+        perspective: 1000px;
 }
-.card-front {
+
+.card-front, .card-back {
         text-align: center;
         box-sizing: border-box;
         margin: 10px;
+
+}
+.card-back {
+    /* backface-visibility: hidden; */
 }
 
-.card-back {
-    text-align: center;
-    box-sizing: border-box;
-    margin: 10px;
+.card-flipped {
+        transform: rotateY(180deg);
 }
 
 .card-fighter-info {
@@ -121,13 +125,13 @@
 
     @media screen and (max-width: 768px) {
         .fighterList {
-            flex-direction: row;
+            display: flex;
             justify-content: space-evenly;
             align-items: center;
         }
 
         .fighter-card {
-            width: 90%;
+            width: 70%;
         }
 
         .card-fighter-info {
@@ -177,3 +181,25 @@
         }
 
     }
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .fighterList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card-wrapper {
+        height: auto;
+        width: 40%;
+    }
+    .card, .card-front, .card-back, .card-flipped {
+        height: auto;
+        width: 100%;
+    }
+    .broken-image {
+        height: auto;
+        width: 70%;
+    }
+
+
+}
