@@ -51,7 +51,7 @@ const weightClasses = [
             <button className="female-button" onClick={onShowFemale}>
                 Female Fighters
             </button>
-            <select onChange={handleSelectChange}>
+            <select onChange={handleSelectChange} className='selecrt-dropdown'>
                 <option value="">Select Weight Class</option>
                 {weightClasses.map((weightClass) => (
                     <option key={weightClass.name} value={weightClass.name}>

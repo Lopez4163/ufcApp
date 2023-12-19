@@ -38,11 +38,10 @@ const Navbar = ({ onShowAll, onShowMale, onShowFemale, onSearch, onShowStrawWeig
                     onSearch={onSearch}
                     />
                 </li>
+                <li className='email-formn-wrapper'>
+                    <EmailForm />
+                </li>
             </ul>
-        </div>
-
-        <div className='email-form-wrapper'>
-            <EmailForm />
         </div>
 
     </nav>

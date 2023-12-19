@@ -131,8 +131,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     gap: 13px;
-    margin-top: 30px;
 }
 
 button {
@@ -153,10 +153,18 @@ button:hover {
         color: #ff4742;
 }
 
-
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (max-width: 900px) {
     .gender-filter-buttons {
-        gap: 0;
-    }
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
+    }
+    button {
+        height: 50px;
+    }
+    select {
+        height: 50px;
+    }
 }
+

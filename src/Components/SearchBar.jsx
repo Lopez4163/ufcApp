@@ -25,11 +25,12 @@ const SearchBar = ({ onSearch }) => {
         <div className={`search-bar ${error ? "error" : ""}`} id='search-baar'>
             <input
                 type="text"
+                 className='search-bar-input'
                 placeholder="Search Fighter..."
                 value={searchTerm}
                 onChange={handleInputChange}
             />
-            <button onClick={handleSearch}>Search</button>
+            <button className='search-button' onClick={handleSearch}>Search</button>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 // WeightClassDropdown.jsx
-
 import React from "react";
+import "../styling/Navbar.css";
 
 const WeightClassDropdown = ({ weightClasses, onSelectWeightClass }) => {
     const handleSelectChange = (e) => {
@@ -9,7 +9,7 @@ const WeightClassDropdown = ({ weightClasses, onSelectWeightClass }) => {
     };
 
     return (
-        <select onChange={handleSelectChange}>
+        <select className='drop-down' onChange={handleSelectChange}>
             <option value="">Select Weight Class</option>
             {weightClasses.map((weightClass) => (
                 <option key={weightClass} value={weightClass}>

@@ -8,23 +8,17 @@
 body {
     font-family: 'Arial', sans-serif;
 }
+ul {
+
+}
 
 .navbar {
-    background-color: black; /* Choose your desired background color */
+    background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-right: 100px;
+    padding-right: 50px;
     padding-left: 50px;
-}
-
-.navbar-content-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: auto;
 }
 .nav-logo {
     width: 200px;
@@ -34,7 +28,6 @@ body {
 .logo-items {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     perspective: 1000px;
@@ -42,31 +35,27 @@ body {
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
-.logo-text {
-    margin-top: 10px;
-}
 .search-content-li {
-    padding: 25px;
+    padding:25px;
     background-color: #121212;
     border-radius: 10px;
 }
 
-.nav-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Adjust the gap between items */
-}
 
+/*.nav-list {*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
 
-
+/*}*/
 .poweredby-items {
     text-align: center;
     font-size: 12px;
-    margin-top: 10px;
+    padding-top: 5px;
 }
 #pwrby-logo {
     height: auto;
@@ -76,15 +65,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
 }
 .newsletter-signup {
     width: 100%;
     /*padding: 20px;*/
-    padding-top: 30px;
+    padding-top: 20px;
     padding-left: 20px ;
     padding-right:20px ;
-    padding-bottom: 20px;
     border: none;
     border-radius: 5px;
 }
@@ -109,6 +96,19 @@ body {
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+.email-sent-text {
+    margin-bottom: 10px;
+    text-align: center;
+    animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .user-email-submit {
     width: 75%;
@@ -137,46 +137,48 @@ body {
     background-color: black;
     color: red;
 }
+select {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
 
-
-
-
-
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     .navbar {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-
-    .nav-list {
         flex-direction: column;
-        align-items: center;
-
+        padding-right: 0;
+        padding-left: 0;
     }
-
-    .logo-items {
-        margin-bottom: 20px;
-    }
-
-}
-
-
-
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-    .nav-list {
-        display: flex;
+    .nav-list{
+        width: 100%;
         flex-direction: row;
-        padding-bottom: 25px;
-    }
-    .nav-logo {
-        height: auto;
-        width: 120px
-    }
-    .logo-text {
-        display: none;
-    }
-    .poweredby-items {
-        display: none;
-    }
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
+    }
+    .logo-items {
+        margin-bottom: 30px;
+
+    }
+    .search-content-li {
+        justify-content: center;
+        height: 200px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .newsletter-signup {
+        display: none;
+    }
 }
+
+
+
+
+
+
+
+

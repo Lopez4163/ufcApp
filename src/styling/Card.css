@@ -14,6 +14,7 @@
     align-content: flex-start;
     padding: 20px 20px 20px 20px;
     gap: 20PX;
+    justify-content: center;
 }
 
 .card {
@@ -122,84 +123,22 @@
         color: red;
 }
 
-
-    @media screen and (max-width: 768px) {
-        .fighterList {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        .fighter-card {
-            width: 70%;
-        }
-
-        .card-fighter-info {
-            width: 100%;
-            height: 100%;
-            padding: 10px 10px 10px 10px;
-        }
-
-        .card-fighter-name {
-            font-size: 20px;
-        }
-
-        .card-fighter-nickname {
-            font-size: 17px;
-        }
-
-        .card-fighter-weightclass {
-            font-size: 15px;
-        }
-
-        .card-fighter-record {
-            font-size: 15px;
-        }
-
-        .fight-card-image, .broken-image {
-            width: 100%;
-            height: 100%;
-        }
-
-        .none-found {
-            width: 100%;
-            height: 100%;
-        }
-
-        .none-found-giphy {
-            width: 100%;
-            height: 100%;
-            top: -100px;
-            right: -100px;
-        }
-
-        .giphy-text {
-            font-size: 20px;
-            top: 20px;
-            bottom: -200px;
-            left: -180px;
-        }
-
-    }
-
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-    .fighterList {
+@media only screen and (max-width: 900px) {
+    .card {
+        background-color: #121212;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .card-wrapper {
-        height: auto;
-        width: 40%;
-    }
-    .card, .card-front, .card-back, .card-flipped {
-        height: auto;
-        width: 100%;
-    }
-    .broken-image {
-        height: auto;
-        width: 70%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        perspective: 1000px;
     }
 
+    .card-front, .card-back {
+        width: 400px;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 10px;
 
+    }
 }
