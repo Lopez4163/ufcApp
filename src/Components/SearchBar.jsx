@@ -25,7 +25,7 @@ const SearchBar = ({ onSearch }) => {
         <div className={`search-bar ${error ? "error" : ""}`} id='search-baar'>
             <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Search Fighter..."
                 value={searchTerm}
                 onChange={handleInputChange}
             />
