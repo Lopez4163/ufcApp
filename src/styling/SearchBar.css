@@ -30,13 +30,13 @@
 /*    }*/
 /*}*/
 .search-bar {
-    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
 }
 .search-bar-input {
-    width: 100%;
+    width: 85%;
     height: 25px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -44,12 +44,32 @@
     font-size: 16px;
     outline: none;
 }
+.search-button {
+    width: 85%;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
 
+.search-bar.error {
+    animation: shake 0.5s ease-in-out;
+}.search-bar.error input::placeholder {
+     color: red;
+ }
 @media only screen and (max-width: 900px) {
     .search-bar {
-        margin-bottom: 10px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
+
 
     }
     .search-bar-input {
@@ -63,5 +83,6 @@
     }
     .search-button {
         height: 40px;
+        width: 100%;
     }
 }

@@ -126,15 +126,12 @@
     margin: 0;
     padding: 0;
 }
-
 .gender-filter-buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    gap: 13px;
+    padding: 10px;
 }
-
 button {
     height: 30px;
     display: inline-block;
@@ -143,10 +140,11 @@ button {
     border: 2px solid #ff4742;
     color: #fff;
     background-color: red;
-    padding: 5px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
     font-weight: 800;
     font-size: 15px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 button:hover {
         background: 0 0;
@@ -158,13 +156,17 @@ button:hover {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding: 10px;
 
     }
     button {
         height: 50px;
+        width: 100%;
+        margin: 5px;
     }
     select {
         height: 50px;
+        border-radius: 6px;
     }
 }
 

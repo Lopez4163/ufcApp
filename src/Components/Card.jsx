@@ -91,7 +91,6 @@ import "../styling/Card.css";
 
 function Card({ fighters, setSelectedCard }) {
   const [flippedCardId, setFlippedCardId] = useState(null);
-
   const handleFlip = (clickedFighter) => {
     setFlippedCardId((prevFlippedCardId) =>
       prevFlippedCardId === clickedFighter.name ? null : clickedFighter.name
@@ -104,7 +103,6 @@ function Card({ fighters, setSelectedCard }) {
     <div className="fighterList">
       {fighters.length === 0 ? (
         <div className="none-found">
-          <div className="none-found">
           {/*<p className="none-found-text">No fighters found</p>*/}
           <iframe
             src="https://giphy.com/embed/qrr9p5kGVbEeq9Dmcq"
@@ -113,7 +111,6 @@ function Card({ fighters, setSelectedCard }) {
             allowFullScreen
           ></iframe>
           <h2 className="giphy-text">404 ERROR: NO FIGHTERS FOUND</h2>
-        </div>
         </div>
       ) : (
         fighters.map((fighter) => (

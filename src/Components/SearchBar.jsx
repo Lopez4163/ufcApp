@@ -1,31 +1,34 @@
 import React, { useState } from "react";
-import "../styling/SearchBar.css"; // Assuming you have a styling file for SearchBar
+import "../styling/SearchBar.css";
 
-// eslint-disable-next-line react/prop-types
 const SearchBar = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState("");
     const [error, setError] = useState(false);
+    const [key, setKey] = useState(0); // Add a key state
 
     const handleInputChange = (event) => {
         setSearchTerm(event.target.value);
-        setError(false); // Clear the error when the user starts typing
+        if (error) {
+            setError(false);
+        }
     };
 
     const handleSearch = () => {
         if (searchTerm.trim() === "") {
             setError(true);
+            setKey(prevKey => prevKey + 1);
             return;
         }
 
-        setError(false); // Clear the error if there's a valid search term
+        setError(false);
         onSearch(searchTerm.toLowerCase());
     };
 
     return (
-        <div className={`search-bar ${error ? "error" : ""}`} id='search-baar'>
+        <div key={key} className={`search-bar ${error ? "error" : ""}`} id='search-baar'>
             <input
                 type="text"
-                 className='search-bar-input'
+                className='search-bar-input'
                 placeholder="Search Fighter..."
                 value={searchTerm}
                 onChange={handleInputChange}
