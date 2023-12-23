@@ -21,15 +21,21 @@ function App() {
         }
 
         if (gender) {
-            if (weightClass === "Flyweight") {
+            if (weightClass === null) {
                 filteredFighters = filteredFighters.filter((fighter) =>
-                    gender === "Female" ? fighter.weightClass.includes("Women's Flyweight") : fighter.weightClass.includes("Flyweight")
+                    gender === "Male" ? !fighter.weightClass.includes("Women's") : fighter.weightClass.includes("Women's")
+                );
+            } else if (weightClass === "Flyweight") {
+                filteredFighters = filteredFighters.filter((fighter) =>
+                    gender === "Male" ? !fighter.weightClass.includes("Women's") : fighter.weightClass.includes("Flyweight")
                 );
             } else if (weightClass === "Bantamweight") {
                 filteredFighters = filteredFighters.filter((fighter) =>
-                    gender === "Female" ? fighter.weightClass.includes("Women's Bantamweight") : fighter.weightClass.includes("Bantamweight")
+                    gender === "Male" ? !fighter.weightClass.includes("Women's") : fighter.weightClass.includes("Flyweight")
                 );
             }
+
+
         }
 
         setFilteredFighterListArray(filteredFighters);
