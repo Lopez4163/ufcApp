@@ -20,7 +20,6 @@ const GenderFilterButton = ({ filterFighters }) => {
     };
 
     const handleGenderClick = (gender) => {
-        console.log(filterFighters);
         filterFighters(null, gender);
     };
 

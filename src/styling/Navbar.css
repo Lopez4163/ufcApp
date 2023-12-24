@@ -140,13 +140,11 @@ body {
     animation: shake 0.5s ease-in-out;
     border: 2px solid red;
 }
-
 select {
     width: 100%;
     padding: 5px;
     border: none;
 }
-
 @media only screen and (max-width: 900px) {
     .navbar {
         display: flex;
@@ -178,9 +176,8 @@ select {
         height: auto;
         width: 450px;
     }
-    .newsletter-container {
-        display: none;
-    }
+
+
 
 
 }

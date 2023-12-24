@@ -30,7 +30,7 @@ export const EmailForm = () => {
     };
 
     return (
-        <div className='newsletter-container'>
+        <div className='newsletter-container overlay'>
             <div className='newsletter-signup'>
                 <h2 className='newsletter-title'>Subscribe to Our Newsletter</h2>
                 <p className='newsletter-summary'>Thank you for visiting and checking out what i do on my time off. Get fighter updates and possibly more! </p>
@@ -39,10 +39,11 @@ export const EmailForm = () => {
                 ) : (
                     <form className='newsletter-signup-form' ref={form} onSubmit={sendEmail}>
                         <input className={`user-email-input ${emailError ? "error" : ""}`} type="text" name="user_name" placeholder=' Full Name' />
-                        <input className={`user-email-input ${emailError ? "error" : ""}`} type="email" name="user_email" placeholder='Email' /> {/* Add the error class here */}
+                        <input className={`user-email-input ${emailError ? "error" : ""}`} type="email" name="user_email" placeholder='Email' />
                         <input className='user-email-submit' type="submit" value="Send" />
                     </form>
                 )}
+
             </div>
         </div>
     );

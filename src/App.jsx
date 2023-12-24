@@ -12,6 +12,7 @@ function App() {
     const [gender, setGender] = useState(null); // Add a gender state
 
     const filterFighters = (weightClass, gender) => {
+        console.log("Filtering fighters:", weightClass, gender);
         let filteredFighters = [...fighterArray];
 
         if (weightClass) {
@@ -26,20 +27,22 @@ function App() {
                     gender === "Male" ? !fighter.weightClass.includes("Women's") : fighter.weightClass.includes("Women's")
                 );
             } else if (weightClass === "Flyweight") {
-                filteredFighters = filteredFighters.filter((fighter) =>
-                    gender === "Male" ? !fighter.weightClass.includes("Women's") : fighter.weightClass.includes("Flyweight")
-                );
+                const flyweightArray = filteredFighters.filter((fighter) => fighter.weightClass.includes("Flyweight"));
+                if (gender === 'Female') {
+                    filteredFighters = flyweightArray.filter(
+                        (fighter) => fighter.weightClass.includes('Women\'s Flyweight')
+                    );
+                }
             } else if (weightClass === "Bantamweight") {
                 filteredFighters = filteredFighters.filter((fighter) =>
-                    gender === "Male" ? !fighter.weightClass.includes("Women's") : fighter.weightClass.includes("Flyweight")
+                    gender === "Male" ? !fighter.weightClass.includes("Women's") : fighter.weightClass.includes("Bantamweight")
                 );
             }
-
-
         }
-
+        console.log("Filtered fighters:", filteredFighters);
         setFilteredFighterListArray(filteredFighters);
     };
+
     const searchFighters = (searchTerm) => {
         const filteredFighters = fighterArray.filter((fighter) =>
             Object.values(fighter).some((value) =>
