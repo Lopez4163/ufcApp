@@ -176,6 +176,9 @@ select {
         height: auto;
         width: 450px;
     }
+    .newsletter-container {
+    display: none;
+    }
 
 
 

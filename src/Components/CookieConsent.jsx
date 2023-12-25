@@ -14,9 +14,13 @@ const CookieConsent = () => {
 
     return isVisible ? (
         <div className="cookie-consent">
-            <p>We use cookies to improve your experience. By using our site, you agree to our use of cookies.</p>
-            <button onClick={handleAccept}>Accept</button>
-            <button onClick={handleDecline}>Decline</button>
+            <h3 className='cookie-consent-summary'> We use cookies on this site to enhance your user experience.
+                By using our site, you agree to our use of cookies.</h3>
+            <div className='cookie-consent-button-wrapper'>
+                <button onClick={handleAccept}>Accept</button>
+                <button onClick={handleDecline}>Decline</button>
+            </div>
+
         </div>
     ) : null;
 };
