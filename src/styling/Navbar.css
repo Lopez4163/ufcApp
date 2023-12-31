@@ -233,7 +233,12 @@ select {
     }
 
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 320px) {
+    .nav-list {
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
     .nav-logo {
         height: 90px;
         width: 100px ;

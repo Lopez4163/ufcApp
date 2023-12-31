@@ -237,3 +237,34 @@
     }
 
 }
+@media only screen and (max-width: 320px) {
+    .search-bar {
+        margin: 0;
+        padding: 0;
+    }
+
+    .search-option {
+        display: flex;
+        flex-direction: row;
+
+    }
+    .search-bar-input {
+        padding: 0;
+        text-align: center;
+        width: 50%;
+    }
+    .search-bar-input::placeholder {
+        margin: 0;
+        padding: 0;
+        font-size: 8px;
+    }
+    .search-button {
+        height: 28px;
+        width: 50%;
+    }
+    .newsletter-button {
+        height: 28px;
+        width: 50%;
+
+    }
+}
