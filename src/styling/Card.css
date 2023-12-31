@@ -4,10 +4,9 @@
     padding: 0;
 }
 
-
 .fighterList {
+    position: relative;
     background-color: black;
-    box-shadow: 10px 10px 10px 10px red;
     overflow-x: auto;
     display: flex;
     flex-wrap: wrap;
@@ -15,133 +14,44 @@
     justify-content: center;
     padding: 20px;
     flex-grow: 1;
-    gap: 20PX;
+    gap: 20px;
     min-height: 100%;
-
+    overflow-y: auto;
 }
-
-.card {
-        background-color: #121212;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 10px;
-        perspective: 1000px;
-}
-
-.card-front, .card-back {
-        text-align: center;
-        box-sizing: border-box;
-        margin: 10px;
-
-}
-.card-back {
-    /* backface-visibility: hidden; */
-}
-
-.card-flipped {
-        transform: rotateY(180deg);
-}
-
-.card-fighter-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        padding: 20px 20px 20px 20px;
-        width: 300px;
-        height: 150px;
-        overflow: auto;
-    }
-
-.fight-card-image, .broken-image {
-        width: 250px;
-        height: 250px;
-        object-fit: contain;
-        border-radius: 50%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-}
-
-.card-fighter-name {
-        font-family: arial, sans-serif;
-        font-size: 20px;
-        margin: 0;
-        color: white;
-        padding-top: 5px;
-}
-
-.card-fighter-nickname {
-        font-family: arial, sans-serif;
-        font-size: 17px;
-        margin: 0;
-        color: white;
-        padding-top: 5px;
-}
-
-.card-fighter-weightclass {
-        font-family: arial, sans-serif;
-        font-size: 15px;
-        color: white;
-        margin: 0;
-        padding-top: 5px;
-}
-
-.card-fighter-record {
-        font-family: arial, sans-serif;
-        font-size: 15px;
-        margin: 0;
-        padding-top: 7px;
-        padding-bottom: 10px;
-}
-
-
-
 .none-found {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100vh;
 }
 
 .none-found-giphy {
-        align-content: center;
-        height: 50%;
-        width: 30%;
-        margin-bottom: 20px;
+    align-content: center;
+    height: 50%;
+    width: 30%;
+    margin-bottom: 20px;
 }
-
 
 .giphy-text {
     margin-bottom: 70px;
-        font-size: 35px;
-        color: red;
+    font-size: 35px;
+    color: red;
 }
 
 @media only screen and (max-width: 900px) {
-    .fighterList {
-        height: 100vh;
-    }
 
-    .card {
+    .fighterList {
         background-color: #121212;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border-radius: 10px;
         perspective: 1000px;
-
     }
+}
+@media only screen and (max-width: 425px) {
 
-    .card-front, .card-back {
-        width: 400px;
-        text-align: center;
-        box-sizing: border-box;
-        margin: 10px;
 
-    }
 }

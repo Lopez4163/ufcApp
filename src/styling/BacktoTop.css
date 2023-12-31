@@ -1,0 +1,33 @@
+.back-to-top {
+    padding: 0;
+    margin: 5px;
+    opacity: 80%;
+}
+button:hover {
+    background: 0 0;
+    color: #ff4742;
+}
+.back-to-top-overlay {
+    position: fixed;
+    top: 20px;
+    left: 60%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.back-to-top-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media only screen and (max-width: 900px) {
+    .back-to-top-overlay {
+        top: 90%;
+        left: 50%;
+    }
+}
+
+
+
