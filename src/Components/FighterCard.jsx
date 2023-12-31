@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import countryFlagEmoji from "country-flag-emoji";
 import ReactCardFlip from "react-card-flip";
 import "../styling/FighterCard.css";
-import altImage from "../assets/tonyAlt.png";
+import tonyAlt from "../assets/tonyAlt.png";
 
 const Tooltip = ({ text }) => {
   return <div className="tooltip">{text}</div>;
@@ -77,7 +77,7 @@ function FighterCard({ fighter, isFlipped, handleFlip }) {
                 }`}
                 src={fighter.imgSrc}
                 onError={(e) => {
-                  e.target.src = altImage;
+                  e.target.src = tonyAlt;
                   e.target.className = "broken-image";
                   e.target.onerror = null;
                 }}

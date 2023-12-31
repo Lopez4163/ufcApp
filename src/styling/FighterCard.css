@@ -14,7 +14,6 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-
 }
 .fighter-card-front-image, .broken-image{
     max-width: 100%;
@@ -89,11 +88,18 @@
 
 @media only screen and (max-width: 425px) {
     .card {
-        height: 250px !important;
-        width: 150px !important;
+        height: 250px; !important;
+        width: 150px; !important;
     }
+
     .card-fighter-front-name {
         font-size: small; !important;
     }
 
+}
+@media only screen and (max-width: 375px) {
+    .card {
+        /*height: 200px; !important;*/
+        /*width: 100px ; !important;*/
+    }
 }
