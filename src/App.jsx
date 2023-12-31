@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "./Components/Card.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import CookieConsent from "./Components/CookieConsent.jsx";
-import fighterListArray from "../src/fighterlistArray.json";
+import fighterListArray from "./assets/fighterListArray.json";
 import "./App.css";
 
 function App() {
