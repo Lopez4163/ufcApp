@@ -233,7 +233,7 @@ select {
     }
 
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 300px) {
     .nav-list {
         padding: 0;
         padding-top: 5px;

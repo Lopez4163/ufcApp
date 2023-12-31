@@ -97,7 +97,7 @@
     }
 
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 300px) {
     .card {
         /*height: 200px; !important;*/
         /*width: 100px ; !important;*/

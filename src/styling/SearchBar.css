@@ -237,7 +237,7 @@
     }
 
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 300px) {
     .search-bar {
         margin: 0;
         padding: 0;

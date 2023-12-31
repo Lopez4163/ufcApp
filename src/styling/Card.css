@@ -52,7 +52,7 @@
         perspective: 1000px;
     }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 300px) {
     .fighterList {
         width: 100vh;
         display: flex;
