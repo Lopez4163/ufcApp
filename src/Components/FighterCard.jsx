@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import countryFlagEmoji from "country-flag-emoji";
 import ReactCardFlip from "react-card-flip";
 import "../styling/FighterCard.css";
-let altImage = "src/assets/tonyAlt.png";
+import altImage from "../assets/tonyAlt.png";
 
 const Tooltip = ({ text }) => {
   return <div className="tooltip">{text}</div>;
