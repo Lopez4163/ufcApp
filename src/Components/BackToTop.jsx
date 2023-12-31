@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./styling/BackToTop.css";
+import "../styling/BacktoTop.css";
 
 const BackToTop = ({ fighterListRef }) => {
   const [backToTop, setBackToTop] = useState(false);
