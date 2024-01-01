@@ -1,6 +1,6 @@
 # [UFC Fight Library](#)
 <img src="src/assets/mainPage.png"
-     alt="Markdown Monster icon" />
+  />
       
 Welcome to the UFC Fight Library, a dynamic web application built with Vite, React.js, Node.js, and Puppeteer.
 
