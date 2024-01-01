@@ -206,35 +206,11 @@ select {
     }
 }
 
-@media only screen and (max-width: 900px) {
-    .nav-list {
-        margin: 0;
-        padding: 10px;
-        display:flex;
-        align-content: center;
-    }
-    .logo-items {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-
+@media only screen and (max-width: 390px) {
+    .nav-bar {
 
     }
-    .nav-logo {
-        height: 80px;
-        width: 150px;
-    }
-    .logo-text {
-        display: none;
-    }
 
-}
-@media only screen and (max-width < 390px ) {
-    .nav-list {
-        padding: 0;
-
-    }
     .nav-logo {
         height: 90px;
         width: 100px ;

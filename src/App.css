@@ -15,16 +15,11 @@
         overflow-y: hidden;
     }
 }
-@media only screen and (max-width: 900px) {
-    .app-container {
-        flex-direction: column;
-    }
-}
 @media only screen and (max-width: 390px) {
     .app-container {
-        flex-direction: row;
-        overflow-y: hidden;
-        overflow-x: hidden;
+        position: fixed;
+        max-height: 100%;
+        flex-direction: column;
     }
 }
 
