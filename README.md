@@ -1,4 +1,4 @@
-<h1 align="center"><a  style="color:red;" href="https://lopez4163.github.io/ufcApp/">UFC Fight Library</a></h1>
+<h1 align="center"  style="color:red;"><a href="https://lopez4163.github.io/ufcApp/">UFC Fight Library</a></h1>
 <img width="1438" alt="mainPage" align="center" src="https://github.com/Lopez4163/ufcApp/assets/64043616/15240177-d010-458e-99c9-52af29820df0">
 <br></br>
 Welcome to the UFC Fight Library, a dynamic web application built with Vite, React.js, Node.js, and Puppeteer.
