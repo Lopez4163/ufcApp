@@ -9,7 +9,7 @@ button:hover {
 }
 .back-to-top-overlay {
     position: fixed;
-    top: 20px;
+    top: 50px;
     left: 60%;
     transform: translateX(-50%);
     opacity: 0;

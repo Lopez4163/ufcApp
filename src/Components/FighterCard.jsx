@@ -5,11 +5,7 @@ import ReactCardFlip from "react-card-flip";
 import "../styling/FighterCard.css";
 import tonyAlt from "../assets/tonyAlt.png";
 
-const Tooltip = ({ text }) => {
-  return <div className="tooltip">{text}</div>;
-};
 function FighterCard({ fighter, isFlipped, handleFlip }) {
-  const [showTooltip, setShowTooltip] = useState(false);
   return (
     // <div className="card-wrapper">
     //   <ReactCardFlip

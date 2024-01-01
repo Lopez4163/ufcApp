@@ -39,7 +39,7 @@ const GenderFilterButton = ({ filterFighters }) => {
         Female Fighters
       </button>
       <select onChange={handleSelectChange} className="select-dropdown">
-        <option value="null">Select Weight Class</option>
+        <option value={""}>Select Weight Class</option>
         {weightClasses.map((weightClass) => (
           <option key={weightClass} value={weightClass}>
             {weightClass}

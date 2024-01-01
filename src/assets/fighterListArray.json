@@ -12833,7 +12833,7 @@
   },
   {
     "imgSrc": "https://dmxg5wxfqgb4u.cloudfront.net/styles/teaser/s3/2023-03/SILVA_BRUNO_03-11.png?h=a30e7339&itok=065ck6Ig",
-    "name": "Bruno Silva",
+    "name": "Bruno  Silva",
     "nickname": "\"Bulldog\"",
     "weightClass": "Flyweight",
     "record": "13-5-2 (W-L-D)",
@@ -12991,22 +12991,7 @@
     "SpecialStatsOne": "1 WINS BY KNOCKOUT",
     "SpecialStatTwo": "8 WINS BY SUBMISSION"
   },
-  {
-    "imgSrc": "https://dmxg5wxfqgb4u.cloudfront.net/styles/teaser/s3/2023-06/SILVA_BRUNO_06-24.png?h=a30e7339&itok=1_xNN_D9",
-    "name": "Bruno Silva",
-    "nickname": "\"Blindado\"",
-    "weightClass": "Middleweight",
-    "record": "23-10-0 (W-L-D)",
-    "POB": "PIRACICABA, BRAZIL",
-    "age": "33",
-    "strikeAccuracy": "47%",
-    "sigStrikesAttempt": "178",
-    "sigStrikesLandedPM": "3.05",
-    "sisStrDefense": "N/A",
-    "averageFightTime": "N/A",
-    "SpecialStatsOne": "5 WINS BY KNOCKOUT",
-    "SpecialStatTwo": "4 WINS BY SUBMISSION"
-  },
+
   {
     "imgSrc": "/themes/custom/ufc/assets/img/no-profile-image.png",
     "name": "Danny Silva",

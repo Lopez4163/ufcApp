@@ -3,11 +3,15 @@
     margin: 0;
     padding: 0;
 }
-
+.fighterList-wrapper {
+    min-width: 80%;
+    overflow-y: scroll;
+    display: flex;
+    margin-left: -30px;
+}
 .fighterList {
     position: relative;
     background-color: black;
-    overflow-x: auto;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -16,27 +20,33 @@
     flex-grow: 1;
     gap: 20px;
     min-height: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
     max-width: 100%;
+}
+
+.none-found-wrapper {
+    width: 35%;
+    margin-right: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 240px;
+
+
+
+
 }
 .none-found {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     justify-content: center;
-    height: 100%;
-    width: 100vh;
+    width: 600px;
+    gap: 10px;
+
 }
 
-.none-found-giphy {
-    align-content: center;
-    height: 50%;
-    width: 30%;
-    margin-bottom: 20px;
-}
 
 .giphy-text {
-    margin-bottom: 70px;
     font-size: 35px;
     color: red;
 }
@@ -52,7 +62,7 @@
         perspective: 1000px;
     }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width < 300px) {
     .fighterList {
         width: 100vh;
         display: flex;

@@ -99,34 +99,38 @@ function Card({ fighters, setSelectedCard }) {
   };
 
   return (
-    <div className="fighterList" ref={fighterListRef}>
-      {fighters.length === 0 ? (
-        <div className="none-found">
-          {/*<p className="none-found-text">No fighters found</p>*/}
-          <iframe
-            src="https://giphy.com/embed/qrr9p5kGVbEeq9Dmcq"
-            frameBorder="0"
-            className="none-found-giphy"
-            allowFullScreen
-          ></iframe>
-          <h2 className="giphy-text">404 ERROR: NO FIGHTERS FOUND</h2>
-        </div>
-      ) : (
-        fighters.map((fighter) => (
-          <div
-            key={fighter.name}
-            className="fighter-card-component"
-            ref={fighterListRef}
-          >
-            <FighterCard
-              fighter={fighter}
-              isFlipped={fighter.name === flippedCardId}
-              handleFlip={() => handleFlip(fighter)}
-            />
+    <div className="fighterList-wrapper">
+      <div className="fighterList" ref={fighterListRef}>
+        {fighters.length === 0 ? (
+          <div className="none-found-wrapper">
+            <div className="none-found">
+              {/*<p className="none-found-text">No fighters found</p>*/}
+              <iframe
+                src="https://giphy.com/embed/qrr9p5kGVbEeq9Dmcq"
+                frameBorder="0"
+                className="none-found-giphy"
+                allowFullScreen
+              ></iframe>
+              <h2 className="giphy-text">404 ERROR: NO FIGHTERS FOUND</h2>
+            </div>
           </div>
-        ))
-      )}
-      <BackToTop fighterListRef={fighterListRef} />
+        ) : (
+          fighters.map((fighter) => (
+            <div
+              key={fighter.name}
+              className="fighter-card-component"
+              ref={fighterListRef}
+            >
+              <FighterCard
+                fighter={fighter}
+                isFlipped={fighter.name === flippedCardId}
+                handleFlip={() => handleFlip(fighter)}
+              />
+            </div>
+          ))
+        )}
+        <BackToTop fighterListRef={fighterListRef} />
+      </div>
     </div>
   );
 }
