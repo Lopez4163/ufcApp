@@ -1,5 +1,5 @@
 # [UFC Fight Library](#)
-<img width="1438" alt="mainPage" src="https://github.com/Lopez4163/ufcApp/assets/64043616/15240177-d010-458e-99c9-52af29820df0">
+<img width="1438" alt="mainPage" align="center" src="https://github.com/Lopez4163/ufcApp/assets/64043616/15240177-d010-458e-99c9-52af29820df0">
 
 Welcome to the UFC Fight Library, a dynamic web application built with Vite, React.js, Node.js, and Puppeteer.
 
