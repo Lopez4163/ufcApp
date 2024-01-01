@@ -1,6 +1,5 @@
 # [UFC Fight Library](#)
-<img src="src/assets/mainPage.png"
-  />
+<img src="mainPage.png">
       
 Welcome to the UFC Fight Library, a dynamic web application built with Vite, React.js, Node.js, and Puppeteer.
 
