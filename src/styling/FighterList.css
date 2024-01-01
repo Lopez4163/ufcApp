@@ -65,16 +65,21 @@
 @media only screen and (max-width: 390px) {
     .fighterList {
         margin-left: 30px;
+        height: 70vh
+    }
+    .none-found {
+        width: 57vh;
+        margin: 0;
+        padding: 0;
+
+    }
+    .none-found-wrapper {
+        margin-top:80px;
     }
 
-
-    .none-found-wrapper {
-        width: 100%;
-        margin-right: 300px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 240px;
-
+    .giphy-text {
+        font-size: 18px;
+        text-align: center;
 
     }
 }
