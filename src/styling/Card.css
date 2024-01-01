@@ -4,7 +4,7 @@
     padding: 0;
 }
 .fighterList-wrapper {
-    min-width: 80%;
+    min-width: 82%;
     overflow-y: scroll;
     display: flex;
     margin-left: -30px;
