@@ -85,7 +85,7 @@
 // FighterList.jsx
 import React, { useState, useEffect, useRef } from "react";
 import FighterCard from "./FighterCard";
-import "../styling/Card.css";
+import "../styling/FighterList.css";
 
 function FighterList({ fighters, setSelectedCard }) {
   const [flippedCardId, setFlippedCardId] = useState(null);

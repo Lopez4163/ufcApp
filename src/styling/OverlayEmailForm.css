@@ -67,15 +67,10 @@
 }
 
 .close-button {
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 220px;
-    left: 700px;
-    height: 3%;
-    width: 3%;
-    border-radius: 50%;
+    border-radius: 10%;
     z-index: 1;
 }
 .close-icon {
@@ -86,6 +81,16 @@
     align-items: center;
 }
 
+@media only screen and (max-width: 390px) {
+    .overlay-user-email-submit {
+        width: 159px;
+        height: 35px;
+    }
+    .email-sent-message {
+        font-size: 20px;
+    }
+
+}
 
 
 
