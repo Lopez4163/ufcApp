@@ -1,5 +1,6 @@
 # [UFC Fight Library](#)
-<img src="mainPage.png">
+<img width="1440" alt="Screenshot 2023-12-25 at 7 30 03 PM" src="https://github.com/Lopez4163/ufcApp/assets/64043616/e648ff35-2596-45c7-a48f-47c98e97f8e5">
+
       
 Welcome to the UFC Fight Library, a dynamic web application built with Vite, React.js, Node.js, and Puppeteer.
 
