@@ -1,3 +1,4 @@
+// BackToTop.jsx
 import React, { useState, useEffect } from "react";
 import "../styling/BacktoTop.css";
 
@@ -9,9 +10,9 @@ const BackToTop = ({ fighterListRef }) => {
       if (fighterListRef.current) {
         const threshold = 100;
 
-        if (fighterListRef.current.scrollTop > threshold) {
+        if (fighterListRef.current.scrollTop > threshold && !backToTop) {
           setBackToTop(true);
-        } else {
+        } else if (fighterListRef.current.scrollTop <= threshold && backToTop) {
           setBackToTop(false);
         }
       }
@@ -24,7 +25,7 @@ const BackToTop = ({ fighterListRef }) => {
         fighterListRef.current.removeEventListener("scroll", handleScroll);
       };
     }
-  }, [fighterListRef]);
+  }, [fighterListRef, backToTop]);
 
   const scrollUp = () => {
     if (fighterListRef.current) {

@@ -1,11 +1,11 @@
 // import React, { useState } from "react";
 // import fighterListArray from "../fighterlistArray.json";
-// import "../styling/Card.css";
+// import "../styling/FighterList.css";
 // import ReactCardFlip from "react-card-flip";
 // let altImage = "src/assets/tonyAlt.jpg";
 
 // // eslint-disable-next-line react/prop-types
-// function Card({ fighters, setSelectedCard }) {
+// function FighterList({ fighters, setSelectedCard }) {
 //   const [flippedCardId, setFlippedCardId] = useState(null);
 
 //   const handleFlip = (fighter) => {
@@ -80,17 +80,15 @@
 //   );
 // }
 
-// export default Card;
+// export default FighterList;
 
-// Card.jsx
+// FighterList.jsx
 import React, { useState, useEffect, useRef } from "react";
 import FighterCard from "./FighterCard";
-import BackToTop from "./BackToTop.jsx";
 import "../styling/Card.css";
 
-function Card({ fighters, setSelectedCard }) {
+function FighterList({ fighters, setSelectedCard }) {
   const [flippedCardId, setFlippedCardId] = useState(null);
-  const fighterListRef = useRef(null); // Initialize the ref with null
 
   const handleFlip = (clickedFighter) => {
     setFlippedCardId((prevFlippedCardId) =>
@@ -100,7 +98,7 @@ function Card({ fighters, setSelectedCard }) {
 
   return (
     <div className="fighterList-wrapper">
-      <div className="fighterList" ref={fighterListRef}>
+      <div className="fighterList">
         {fighters.length === 0 ? (
           <div className="none-found-wrapper">
             <div className="none-found">
@@ -116,11 +114,7 @@ function Card({ fighters, setSelectedCard }) {
           </div>
         ) : (
           fighters.map((fighter) => (
-            <div
-              key={fighter.name}
-              className="fighter-card-component"
-              ref={fighterListRef}
-            >
+            <div key={fighter.name} className="fighter-card-component">
               <FighterCard
                 fighter={fighter}
                 isFlipped={fighter.name === flippedCardId}
@@ -129,10 +123,9 @@ function Card({ fighters, setSelectedCard }) {
             </div>
           ))
         )}
-        <BackToTop fighterListRef={fighterListRef} />
       </div>
     </div>
   );
 }
 
-export default Card;
+export default FighterList;

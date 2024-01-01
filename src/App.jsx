@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "./Components/Card.jsx";
+import FighterList from "./Components/FighterList.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import CookieConsent from "./Components/CookieConsent.jsx";
 import fighterListArray from "./assets/fighterListArray.json";
@@ -79,7 +79,7 @@ function App() {
         onShowHeavyWeight={() => filterFighters("Heavyweight", gender)}
         onSearch={searchFighters}
       />
-      <Card
+      <FighterList
         fighters={filteredFighterListArray}
         setSelectedCard={setSelectedCard}
       />

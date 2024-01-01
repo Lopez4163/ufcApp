@@ -6,7 +6,7 @@ Welcome to the UFC Fight Library, a dynamic web application built with Vite, Rea
 
 ## Summary
 
-UFC Fight Library is an application that provides a curated database of UFC fighters by implementing robust web scraping with Puppeteer. The application boasts a responsive React front end, offering dynamic user interactions and a fluid user interface. With features like a powerful navbar, subscription mechanism, and an interactive Fighter Card Display, this application delivers an immersive platform for exploring the UFC fighter roster.
+UFC Fight Library is an application that provides a curated database of UFC fighters by implementing robust web scraping with Puppeteer. The application boasts a responsive React front end, offering dynamic user interactions and a fluid user interface. With features like a powerful navbar, subscription mechanism, and an interactive Fighter FighterList Display, this application delivers an immersive platform for exploring the UFC fighter roster.
 
 ## Stack
 
@@ -37,8 +37,8 @@ UFC Fight Library is an application that provides a curated database of UFC figh
 - **Subscription Mechanism:**
   - Engineered a subscription mechanism allowing users to receive automated email confirmations using Node.js.
 
-- **Fighter Card Display:**
-  - Designed an interactive Fighter Card Display component, leveraging React's component architecture for an engaging user experience.
+- **Fighter FighterList Display:**
+  - Designed an interactive Fighter FighterList Display component, leveraging React's component architecture for an engaging user experience.
 
 - **Cross-Browser Compatibility:**
   - Ensured cross-browser compatibility and responsiveness, adhering to best practices for creating a versatile application across diverse screen sizes.
