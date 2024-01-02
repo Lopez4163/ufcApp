@@ -10,8 +10,7 @@ UFC Fight Library is an application that provides a curated database of UFC figh
 
 ## Mobile Interface
 
-<div>https://github.com/Lopez4163/ufcApp/assets/64043616/db1d2fe6-a2b2-43af-8698-6d6cf6687ead
-</div>
+https://github.com/Lopez4163/ufcApp/assets/64043616/db1d2fe6-a2b2-43af-8698-6d6cf6687ead
 
 ## Stack
 
