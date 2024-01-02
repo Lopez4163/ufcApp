@@ -19,6 +19,7 @@
     .app-container {
         position: fixed;
         max-height: 100%;
+        min-width: 100%;
         flex-direction: column;
     }
 }

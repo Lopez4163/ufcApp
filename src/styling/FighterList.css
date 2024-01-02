@@ -4,7 +4,7 @@
     padding: 0;
 }
 .fighterList-wrapper {
-    min-width: 82%;
+    min-width: 80%;
     overflow-y: scroll;
     display: flex;
     margin-left: -30px;
@@ -62,13 +62,13 @@
 /*        perspective: 1000px;*/
 /*    }*/
 /*}*/
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 390px ) {
     .fighterList {
         margin-left: 30px;
         height: 70vh
     }
     .none-found {
-        width: 57vh;
+        width: 62vh;
         margin: 0;
         padding: 0;
 
