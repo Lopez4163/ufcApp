@@ -9,7 +9,8 @@ Welcome to the UFC Fight Library, a dynamic web application built with Vite, Rea
 UFC Fight Library is an application that provides a curated database of UFC fighters by implementing robust web scraping with Puppeteer. The application boasts a responsive React front end, offering dynamic user interactions and a fluid user interface. With features like a powerful navbar, subscription mechanism, and an interactive Fighter FighterList Display, this application delivers an immersive platform for exploring the UFC fighter roster.
 
 ## Mobile Interface
-<img width="1438" alt="mainPage" align="center" src="https://github.com/Lopez4163/ufcApp/assets/64043616/6eadc01e-6acf-4f83-9b2b-49d1df981026">
+![Screen-2024-01-02-143100](https://github.com/Lopez4163/ufcApp/assets/64043616/31d9dbda-f1f5-4e9d-8459-82fa917d84de)
+
 
 
 
