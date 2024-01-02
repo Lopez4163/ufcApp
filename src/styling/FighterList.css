@@ -65,13 +65,13 @@
 @media only screen and (max-width: 390px ) {
     .fighterList {
         margin-left: 30px;
-        height: 70vh
+        height: 70vh;
+        overflow-x: hidden;
     }
     .none-found {
         width: 62vh;
         margin: 0;
         padding: 0;
-
     }
     .none-found-wrapper {
         margin-top:80px;
