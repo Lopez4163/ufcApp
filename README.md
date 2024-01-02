@@ -12,7 +12,7 @@ UFC Fight Library is an application that provides a curated database of UFC figh
 
 <p align="center">
   <video width="640" height="360" controls>
-    <source src="path/to/your/video.mp4" type="video/mp4">
+    <source src="https://github.com/Lopez4163/ufcApp/assets/64043616/e7047460-bf2c-4d08-8192-ec132498c2f0" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>
